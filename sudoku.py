@@ -106,7 +106,7 @@ class Sudoku:
             row_values = set(self.row_values(i))
             block_values = set(self.block_values(i))
 
-            if column_values.difference(values) or row_values.difference(values) or block_values.difference(values):
+            if values.difference(column_values) or values.difference(row_values) or values.difference(block_values):
                 result = False
                 return result
 
